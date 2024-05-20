@@ -1,9 +1,13 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './App.css'
+
+import "./server"
+
 import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { Vans } from './pages/Vans';
 import { Nav } from './components/Nav';
+
+import './App.css'
 
 function App() {
 
