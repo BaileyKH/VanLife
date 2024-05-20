@@ -204,6 +204,60 @@ i[class*='van-type-'] {
     padding: 7px 14px;
 }
 
+/** VAN DETAILS **/
+.van-detail-container {
+    padding: 27px;
+}
+
+.van-detail-container .back-button {
+    color: black;
+    text-decoration: none;
+}
+
+.van-detail-container .back-button:visited {
+    
+}
+
+.van-detail-container .back-button span {
+    text-decoration: underline;
+}
+
+.van-detail {
+    display: flex;
+    flex-direction: column;
+    color: #161616;
+}
+
+.van-detail img {
+    border-radius: 5px;
+    margin-block: 47px;
+}
+
+.van-detail h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.van-detail > i {
+    align-self: flex-start;
+}
+
+.van-detail .van-price {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.van-detail .van-price span {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.van-detail .link-button {
+    background-color: #FF8C38;
+    color: white;
+    font-size: 1.125rem;
+}
+
 /* HOME MEDIA */
 @media only screen and (min-width: 1024px) {
     .home-container {
@@ -235,5 +289,13 @@ i[class*='van-type-'] {
 @media only screen and (min-width: 1024px) {
     .about-hero-image {
         width: 100%;
+    }
+}
+
+/* VAN DETAIL MEDIA */
+@media only screen and (min-width: 1024px) {
+    .van-detail-container {
+        margin: 0 80px;
+        padding: 27px;
     }
 }
