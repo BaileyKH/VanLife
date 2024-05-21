@@ -7,8 +7,13 @@ import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { Vans } from './pages/Vans/Vans';
 import { VanDetail } from './pages/Vans/VanDetail';
+import { Dashboard } from './pages/Hosts/Dashboard';
+import { Income } from './pages/Hosts/Income';
+import { Reviews } from './pages/Hosts/Reviews';
 
 import './App.css'
+import { HostLayout } from './components/HostLayout';
+
 
 
 function App() {
@@ -18,11 +23,17 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route element={<Layout />}>
-            <Route exact path="/" element={<Home />}/>
-            <Route path="/about" element={<About />}/>
-            <Route path="/vans" element={<Vans />}/>
-            <Route path='/vans/:id' element={<VanDetail />}/>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />}/>
+            <Route path="about" element={<About />}/>
+            <Route path="vans" element={<Vans />}/>
+            <Route path='vans/:id' element={<VanDetail />}/>
+            
+            <Route path="/host" element={<HostLayout />}>
+              <Route index element={<Dashboard />}/>
+              <Route path="income" element={<Income />}/>
+              <Route path="reviews" element={<Reviews />}/>
+            </Route>
           </Route>
         </Routes>
       </Router>
