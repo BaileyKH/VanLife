@@ -249,9 +249,9 @@ i[class*='van-type-'] {
     text-decoration: none;
 }
 
-.van-detail-container .back-button:visited {
+/* .van-detail-container .back-button:visited {
     
-}
+} */
 
 .van-detail-container .back-button span {
     text-decoration: underline;
@@ -375,6 +375,33 @@ i[class*='van-type-'] {
 .host-van-detail-info-text > h4 {
     font-size: 20px;
     margin-block: 0;
+}
+
+/** VAN DETAIL NAV **/
+.host-van-detail-nav {
+    display: flex;
+    margin-block: 25px;
+}
+
+.host-van-detail-nav a {
+    text-decoration: none;
+    color: #4D4D4D;
+    font-weight: 500;
+    padding: 5px 20px;
+}
+
+.host-van-detail-nav a:first-of-type {
+    text-decoration: none;
+    color: #4D4D4D;
+    font-weight: 500;
+    padding: 5px 15px;
+    margin-left: -15px;
+}
+
+.host-van-detail-nav a:hover {
+    color: #161616;
+    text-decoration: underline;
+    font-weight: 700;
 }
 
 /* HOME MEDIA */
