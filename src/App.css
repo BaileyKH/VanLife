@@ -4,6 +4,7 @@
     flex-direction: column;
 }
 
+/** NAV **/
 header {
     height: 110px;
     display: flex;
@@ -29,6 +30,13 @@ header a {
 header a:hover {
     color: #161616;
     text-decoration: underline;
+}
+
+a.active-link{
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    color: #161616;
 }
 
 main {
