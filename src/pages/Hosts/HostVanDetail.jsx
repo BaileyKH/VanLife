@@ -43,7 +43,7 @@ export const HostVanDetail = () => {
                     <NavLink style={({ isActive }) => isActive ? vanDetailStlyes : null} to="pricing">Pricing</NavLink>
                     <NavLink style={({ isActive }) => isActive ? vanDetailStlyes : null} to="photos">Photos</NavLink>
                 </nav>
-                <Outlet />
+                <Outlet context={{ currentVan }}/>
             </div>
         </section>
     );

@@ -404,6 +404,33 @@ i[class*='van-type-'] {
     font-weight: 700;
 }
 
+/** HOST VAN DETAILS **/
+.host-van-detail-info > h4 {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+}
+.host-van-detail-info > h4 > span {
+    font-weight: 500;
+}
+
+/** HOST VAN PRICE **/
+.host-van-price {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.host-van-price > span {
+    font-size: 16px;
+    color: #4D4D4D;
+}
+
+/** HOST VAN IMAGE **/
+.host-van-detail-image {
+    height: 100px;
+    border-radius: 5px;
+}
+
 /* HOME MEDIA */
 @media only screen and (min-width: 1024px) {
     .home-container {
