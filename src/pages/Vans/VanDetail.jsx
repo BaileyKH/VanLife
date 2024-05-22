@@ -1,17 +1,37 @@
 import React, { useState, useEffect } from "react"
 import { useParams, Link, useLocation } from "react-router-dom"
+import { getVans } from "../../api"
 
 export const VanDetail = () => {
 
     const [vanDetails, setVanDetails] = useState(null)
-    const params = useParams()
+    const [loading, setLoading] = React.useState(false)
+    const [error, setError] = React.useState(null)
+    const { id } = useParams()
     const location = useLocation()
 
     useEffect(() => {
-        fetch(`/api/vans/${params.id}`)
-            .then(res => res.json())
-            .then(data => setVanDetails(data.vans))
-    },[params.id])
+        async function loadVans() {
+            setLoading(true)
+            try {
+                const data = await getVans(id)
+                setVan(data)
+            } catch (err) {
+                setError(err)
+            } finally {
+                setLoading(false)
+            }
+        }
+        loadVans()
+    },[id])
+
+    if (loading) {
+        return <h1>Loading...</h1>
+    }
+    
+    if (error) {
+        return <h1>There was an error: {error.message}</h1>
+    }
 
     const  search = location.state?.search || ""
     const type = location.state?.type || "all"
@@ -21,7 +41,7 @@ export const VanDetail = () => {
             <Link to={`..${search}`} relative="path" className="back-button">
                 &larr; <span>Back to {type} vans</span>
             </Link>
-            {vanDetails ? (
+            {vanDetails && (
                 <div className="van-detail">
                     <img src={vanDetails.imageUrl} />
                     <i className={`van-type ${vanDetails.type} selected`}>{vanDetails.type}</i>
@@ -30,7 +50,7 @@ export const VanDetail = () => {
                     <p>{vanDetails.description}</p>
                     <button className="link-button">Rent this van</button>
                 </div>
-            ) : <h2>Loading...</h2>}
+            )}
         </div>
     );
 }
