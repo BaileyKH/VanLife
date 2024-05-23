@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams, Link, NavLink, Outlet } from "react-router-dom";
+import { getHostVans } from "../../api"
 
 export const HostVanDetail = () => {
     const { id } = useParams();

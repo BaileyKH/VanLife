@@ -10,6 +10,7 @@ export const Login = () => {
     
     const navigate = useNavigate()
     const location = useLocation()
+    const from = location.state?.from || "/host"
 
     useEffect(() => {
         if (location.state?.message) {
@@ -27,7 +28,8 @@ export const Login = () => {
         loginUser(loginFormData)
             .then(data => {
                 setError(null)
-                navigate("/host")
+                localStorage.setItem("loggedin", true)
+                navigate(from, { replace: true })
             })
             .catch (err => {
                 setError(err)
