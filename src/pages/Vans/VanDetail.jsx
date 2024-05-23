@@ -15,7 +15,7 @@ export const VanDetail = () => {
             setLoading(true)
             try {
                 const data = await getVans(id)
-                setVan(data)
+                setVanDetails(data)
             } catch (err) {
                 setError(err)
             } finally {
