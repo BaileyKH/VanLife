@@ -800,6 +800,15 @@ img.graph {
         width: 20%;
     }
 
+    .home-container h1 {
+        padding: 0;
+    }
+
+    .home-container p {
+        font-size: 5px;
+        
+    }
+
     nav {
         display: flex;
         justify-content: center;
@@ -807,7 +816,20 @@ img.graph {
     }
 
     header .site-logo {
-        font-size: 1.4rem;
+        font-size: 1rem;
+        margin: 0;
+        padding-left: 10px;
+    }
+
+    .nav-links {
+        font-size: 0.8rem;
+        padding: 13px;
+    }
+
+    .login-button {
+        font-size: 0.7rem;
+        width: max-content;
+        margin: 0;
     }
 }
 
